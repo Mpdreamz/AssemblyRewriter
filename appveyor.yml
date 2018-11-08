@@ -9,3 +9,9 @@ environment:
 artifacts:
   - path: '**\*.nupkg'
     name: AssemblyRewriter
+deploy:
+  provider: NuGet
+  server: https://www.myget.org/F/assembly-rewriter-temp/api/v3/index.json
+  api_key:
+    secure: HBy2VHve+/49OtJlgU1JBDLTkzEnBE0nzeq/F/4crZGY1SAZN6g9r1ofXEduhOS/
+  skip_symbols: true
